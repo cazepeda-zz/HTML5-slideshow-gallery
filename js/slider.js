@@ -20,15 +20,19 @@ Slider = {
 	}
 	, next : function () {
 		if(Slider.options.active < Slider.options.count - 1) Slider.go(parseInt(Slider.options.active + 1));
+		else Slider.go(0);
 	}
 	, prev : function () {
 		if(Slider.options.active > 0) Slider.go(parseInt(Slider.options.active - 1));
+		else Slider.go(Slider.options.count - 1);
 	}
 	, random : function () {
 		var rnd = Math.round(Math.random()*(Slider.options.count - 1));
 		if(rnd != Slider.options.active) Slider.go(rnd);
 		else Slider.random();
 	}
+	, play : function () {}
+	, pause : function () {}
 	, init : function () {
 		$('figcaption').forEach(function(el, i){
 			Slider.options.count++; 
