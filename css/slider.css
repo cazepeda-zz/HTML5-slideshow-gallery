@@ -1,0 +1,50 @@
+body {
+		width: 960px;
+		font: x-small Helvetica, Arial, Sans-Serif;
+		color: #333;
+		line-height: 1.2em;
+		margin: 0 auto;
+		padding:0;
+	}
+article { 
+	clear: both; 
+	position: relative;
+	font: 2.2em bold Tahoma;
+	color: #aaa;
+}
+/* HTML5 Slider */
+#container {
+	position: relative;
+	width:800px;
+	height: 350px;
+	margin: 20px 0px; 
+	padding: 0px;	
+}
+figure {
+	position: relative;
+	display: block;
+	height: 0;
+	margin: 0px 0px 20px 0px; 
+	padding: 0px;
+	clear: left;
+}
+figure img {
+	display: block;
+	margin: 0px 0px 0px 350px; 
+	padding: 0px;
+}
+figure img.inactive {
+	display: none;
+}
+figure figcaption {
+	position: relative;
+	display: block;
+	float: left;
+	width: 350px;
+	margin: 10px 0px 0px 0px; 
+	padding: 0px;
+	top: -300px;
+}
+
+
+
