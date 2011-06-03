@@ -9,13 +9,9 @@ Slider = {
 	}
 	
 	, go : function (index) {
-		$('figure img').forEach(function(el, i){
-			if(i!=index) $(el).addClass('inactive');
-			else $(el).removeClass('inactive');
-		});
-		$('figcaption').forEach(function(el, i){
-			if(i!=index) $(el).removeClass('active');
-			else $(el).addClass('active');
+		$('figure').forEach(function(el, i){
+			if(i!=index) $(el).removeClass('active').addClass('inactive');
+			else $(el).removeClass('inactive').addClass('active');
 		});
 		console.log(index);
 	}

@@ -35,10 +35,10 @@ figure img {
 	top: 0;
 	right: 0;
 }
-figure img.inactive {
+figure.inactive img {
 	display: none;
 }
-figcaption.active {
+figure.active figcaption {
 	background: #eee;
 }
 figure figcaption {
