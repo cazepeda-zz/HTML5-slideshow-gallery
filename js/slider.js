@@ -8,13 +8,27 @@ Slider = {
 		, loop : 1
 	}
 	
-	, go : function (index) {}
+	, go : function (index) {
+		$('figure img').forEach(function(el, i){
+			if(i!=index) $(el).addClass('inactive');
+			else $(el).removeClass('inactive');
+		});
+		$('figcaption').forEach(function(el, i){
+			if(i!=index) $(el).removeClass('active');
+			else $(el).addClass('active');
+		});
+		console.log(index);
+	}
 	, next : function () {}
 	, prev : function () {}
 	, random : function () {}
 	, init : function () {
-		$('figure img').forEach(function(el, i){
-			if(i!=0) $(el).addClass('inactive')
+		Slider.go(0);
+		$('figcaption').forEach(function(el, i){
+			$(this).click( function(){
+				Slider.go(i)
+			});
 		});
+		
 	}
 }
