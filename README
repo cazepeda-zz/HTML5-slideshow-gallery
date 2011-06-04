@@ -1,4 +1,13 @@
 A simple HTML5 slideshow gallery using figure/img/figcaption
+Still under developement. 
+
 Dependencies: Ender.js (see http://enderjs.com for instructions on build and license)
+
+TO-DO:
+- play/pause methods
+- optionally add secondary navigation (prev/next arrows, 1/2/3... bullets)
+- Reusable object to generate different instances in one page
+- Chain methods to $
+- encapsulation according to Bridge API + NPM
 
 All images used in the example have copyright. All rights reserved, please respect my rights.

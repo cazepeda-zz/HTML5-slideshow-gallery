@@ -3,7 +3,7 @@
 
 Slider = {
 	options : {
-		  duration : 1000
+		  duration : 5000
 		, autoplay : 1
 		, loop : 1
 		, active : 0
@@ -20,11 +20,11 @@ Slider = {
 	}
 	, next : function () {
 		if(Slider.options.active < Slider.options.count - 1) Slider.go(parseInt(Slider.options.active + 1));
-		else Slider.go(0);
+		else if(Slider.options.loop == 1) Slider.go(0);
 	}
 	, prev : function () {
 		if(Slider.options.active > 0) Slider.go(parseInt(Slider.options.active - 1));
-		else Slider.go(Slider.options.count - 1);
+		else if(Slider.options.loop == 1) Slider.go(Slider.options.count - 1);
 	}
 	, random : function () {
 		var rnd = Math.round(Math.random()*(Slider.options.count - 1));
@@ -42,5 +42,6 @@ Slider = {
 			});
 		});
 		Slider.go(0);
+		if(Slider.options.autoplay == 1) Slider.play();
 	}
 }
