@@ -4,7 +4,6 @@ Still under developement.
 Dependencies: Ender.js (see http://enderjs.com for instructions on build and license)
 
 TO-DO:
-- play/pause methods
 - optionally add secondary navigation (prev/next arrows, 1/2/3... bullets)
 - Reusable object to generate different instances in one page
 - Chain methods to $

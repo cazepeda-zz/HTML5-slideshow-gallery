@@ -3,11 +3,13 @@
 
 Slider = {
 	options : {
-		  duration : 5000
+		  duration : 1000
 		, autoplay : 1
 		, loop : 1
 		, active : 0
 		, count : 0
+		, playing : 0
+		, timeout : null
 	}
 	
 	, go : function (index) {
@@ -31,8 +33,15 @@ Slider = {
 		if(rnd != Slider.options.active) Slider.go(rnd);
 		else Slider.random();
 	}
-	, play : function () {}
-	, pause : function () {}
+	, play : function () {
+		if(Slider.options.playing == 1) return;
+		Slider.options.timeout = setInterval(Slider.next, Slider.options.duration);
+		Slider.options.playing = 1;
+	}
+	, pause : function () {
+		clearTimeout(Slider.options.timeout);
+		Slider.options.playing = 0;
+	}
 	, init : function () {
 		$('figcaption').forEach(function(el, i){
 			Slider.options.count++; 
