@@ -4,7 +4,8 @@ Still under developement.
 Dependencies: Ender.js (see http://enderjs.com for instructions on build and license)
 
 TO-DO:
-- optionally add secondary navigation (prev/next arrows, 1/2/3... bullets)
+- style (or use icons) and position through CSS the new optional prev/next navigation
+- optionally add secondary navigation: 1/2/3... bullets
 - Reusable object to generate different instances in one page
 - Chain methods to $
 - encapsulation according to Bridge API + NPM

@@ -10,6 +10,7 @@ Slider = {
 		, count : 0
 		, playing : 0
 		, timeout : null
+		, buttons : 1
 	}
 	
 	, go : function (index) {
@@ -42,6 +43,12 @@ Slider = {
 		clearTimeout(Slider.options.timeout);
 		Slider.options.playing = 0;
 	}
+	, addButtons : function () {
+		var BB = '<a id="P" href="#" onclick="Slider.prev()">&lt;</a><a id="N" href="#" onclick="Slider.next()">&gt;</a>';
+		$('#container').append(BB);
+		$('#P').css({'position':'absolute', top: '140px', left : '350px'})
+		$('#N').css({'position':'absolute', top: '140px', right : '0px'})
+	}
 	, init : function () {
 		$('figcaption').forEach(function(el, i){
 			Slider.options.count++; 
@@ -52,5 +59,6 @@ Slider = {
 		});
 		Slider.go(0);
 		if(Slider.options.autoplay == 1) Slider.play();
+		if(Slider.options.buttons == 1) Slider.addButtons();
 	}
 }
